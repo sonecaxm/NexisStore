@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-     <link
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
@@ -15,9 +21,10 @@
     <title>NexisStore</title>
   </head>
   <body>
-
+    <div class="overlay" id="overlay" onclick="closesidebar()"></div>
     <!-- HEADER -->
     <header>
+      <i class="fas fa-bars menu-icon" onclick="togglesidebar()"></i>
       <div class="logo">NexisStore</div>
       <nav>
         <ul>
@@ -29,6 +36,16 @@
         </ul>
       </nav>
     </header>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar" id="sidebar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#depoimentos">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </div>
 
     <!-- HERO / CARROSSEL -->
     <div class="container" id="home">
@@ -46,8 +63,11 @@
           </div>
           <div class="content">
             <p class="product-tag">Novo Lançamento</p>
-            <p class="product-name">Apple Watch<br>Series 10</p>
-            <p class="description">O Apple Watch Series 10 traz inovação e desempenho excepcional para o seu pulso.</p>
+            <p class="product-name">Apple Watch<br />Series 10</p>
+            <p class="description">
+              O Apple Watch Series 10 traz inovação e desempenho excepcional
+              para o seu pulso.
+            </p>
             <button class="btn">Saiba Mais</button>
           </div>
         </div>
@@ -59,7 +79,10 @@
           <div class="content">
             <p class="product-tag">Som Premium</p>
             <p class="product-name">Air Pods Max</p>
-            <p class="description">Os Air Pods Max oferecem uma experiência de áudio imersiva e conectividade sem fio.</p>
+            <p class="description">
+              Os Air Pods Max oferecem uma experiência de áudio imersiva e
+              conectividade sem fio.
+            </p>
             <button class="btn">Saiba Mais</button>
           </div>
         </div>
@@ -71,7 +94,10 @@
           <div class="content">
             <p class="product-tag">Alta Performance</p>
             <p class="product-name">Vision Pro</p>
-            <p class="description">O Vision Pro oferece uma experiência imersiva de realidade aumentada como você nunca viu.</p>
+            <p class="description">
+              O Vision Pro oferece uma experiência imersiva de realidade
+              aumentada como você nunca viu.
+            </p>
             <button class="btn">Saiba Mais</button>
           </div>
         </div>
@@ -79,13 +105,29 @@
 
       <div class="arrows">
         <button class="arrows-btn" id="prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
-            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#fff"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
           </svg>
         </button>
         <button class="arrows-btn" id="next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
-            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#fff"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
           </svg>
         </button>
       </div>
@@ -105,7 +147,9 @@
       <div class="section-header">
         <span class="section-label">Catálogo</span>
         <h2 class="section-title">Produtos em <span>Destaque</span></h2>
-        <p class="section-sub">Tecnologia de ponta com entrega garantida e suporte especializado.</p>
+        <p class="section-sub">
+          Tecnologia de ponta com entrega garantida e suporte especializado.
+        </p>
       </div>
 
       <div class="cards-grid">
@@ -117,7 +161,10 @@
           <div class="card-body">
             <p class="card-tag">Novo Lançamento</p>
             <h3 class="card-name">Apple Watch Series 10</h3>
-            <p class="card-desc">Smartwatch com monitoramento de saúde avançado, tela maior e bateria de longa duração.</p>
+            <p class="card-desc">
+              Smartwatch com monitoramento de saúde avançado, tela maior e
+              bateria de longa duração.
+            </p>
             <div class="card-footer">
               <div class="card-price">
                 <span class="price-label">A partir de</span>
@@ -135,7 +182,10 @@
           <div class="card-body">
             <p class="card-tag">Som Premium</p>
             <h3 class="card-name">AirPods Max</h3>
-            <p class="card-desc">Cancelamento de ruído ativo, áudio espacial personalizado e 20h de reprodução em Hi-Fi.</p>
+            <p class="card-desc">
+              Cancelamento de ruído ativo, áudio espacial personalizado e 20h de
+              reprodução em Hi-Fi.
+            </p>
             <div class="card-footer">
               <div class="card-price">
                 <span class="price-label">A partir de</span>
@@ -154,7 +204,10 @@
           <div class="card-body">
             <p class="card-tag">Alta Performance</p>
             <h3 class="card-name">Apple Vision Pro</h3>
-            <p class="card-desc">Computação espacial com chip M2 e R1. Realidade aumentada com resolução de cinema.</p>
+            <p class="card-desc">
+              Computação espacial com chip M2 e R1. Realidade aumentada com
+              resolução de cinema.
+            </p>
             <div class="card-footer">
               <div class="card-price">
                 <span class="price-label">A partir de</span>
@@ -172,8 +225,14 @@
       <div class="sobre-grid">
         <div class="sobre-texto" data-aos>
           <span class="section-label">Por que a NexisStore</span>
-          <h2 class="section-title">A melhor experiência<br><span>em tecnologia</span></h2>
-          <p class="sobre-desc">Somos mais do que uma loja. Somos o destino certo para quem quer o melhor da Apple com atendimento premium, entrega rápida e suporte dedicado.</p>
+          <h2 class="section-title">
+            A melhor experiência<br /><span>em tecnologia</span>
+          </h2>
+          <p class="sobre-desc">
+            Somos mais do que uma loja. Somos o destino certo para quem quer o
+            melhor da Apple com atendimento premium, entrega rápida e suporte
+            dedicado.
+          </p>
           <div class="stats-row">
             <div class="stat">
               <span class="stat-num">50K+</span>
@@ -194,20 +253,33 @@
           <div class="feature">
             <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
             <h4>Entrega Expressa</h4>
-            <p>Receba em até 24h. Frete grátis acima de R$ 500 para todo o Brasil.</p>
+            <p>
+              Receba em até 24h. Frete grátis acima de R$ 500 para todo o
+              Brasil.
+            </p>
           </div>
           <div class="feature">
             <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
             <h4>Pagamento Seguro</h4>
-            <p>Ambiente criptografado. Pix, cartão ou boleto em até 12x sem juros.</p>
+            <p>
+              Ambiente criptografado. Pix, cartão ou boleto em até 12x sem
+              juros.
+            </p>
           </div>
           <div class="feature">
-            <div class="feature-icon"><i class="fa-regular fa-circle-check"></i></div>
+            <div class="feature-icon">
+              <i class="fa-regular fa-circle-check"></i>
+            </div>
             <h4>Garantia Oficial</h4>
-            <p>Produtos originais com garantia Apple de 1 ano e nota fiscal em toda compra.</p>
+            <p>
+              Produtos originais com garantia Apple de 1 ano e nota fiscal em
+              toda compra.
+            </p>
           </div>
           <div class="feature">
-            <div class="feature-icon"><i class="bi bi-arrow-return-left"></i></div>
+            <div class="feature-icon">
+              <i class="bi bi-arrow-return-left"></i>
+            </div>
             <h4>Troca Fácil</h4>
             <p>Política de troca e devolução de 30 dias sem burocracia.</p>
           </div>
@@ -219,13 +291,19 @@
     <section class="section-depoimentos" id="depoimentos">
       <div class="section-header">
         <span class="section-label">Avaliações</span>
-        <h2 class="section-title">O que nossos clientes<br><span>estão dizendo</span></h2>
+        <h2 class="section-title">
+          O que nossos clientes<br /><span>estão dizendo</span>
+        </h2>
       </div>
 
       <div class="depo-grid">
         <div class="depo-card" data-aos>
           <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">"Recebi meu Apple Watch no dia seguinte. Embalagem impecável e produto original. Atendimento nota 10, com certeza vou comprar de novo!"</p>
+          <p class="depo-text">
+            "Recebi meu Apple Watch no dia seguinte. Embalagem impecável e
+            produto original. Atendimento nota 10, com certeza vou comprar de
+            novo!"
+          </p>
           <div class="depo-author">
             <div class="depo-avatar">AM</div>
             <div class="depo-info">
@@ -237,7 +315,10 @@
 
         <div class="depo-card" data-aos>
           <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">"Melhor loja para comprar Apple no Brasil. Os AirPods Max chegaram em perfeito estado e o preço foi o melhor que encontrei."</p>
+          <p class="depo-text">
+            "Melhor loja para comprar Apple no Brasil. Os AirPods Max chegaram
+            em perfeito estado e o preço foi o melhor que encontrei."
+          </p>
           <div class="depo-author">
             <div class="depo-avatar">RF</div>
             <div class="depo-info">
@@ -249,7 +330,10 @@
 
         <div class="depo-card" data-aos>
           <div class="depo-stars">★★★★★</div>
-          <p class="depo-text">"Vision Pro entregue com muito cuidado. Suporte excelente antes e depois da compra. Recomendo a NexisStore para todos!"</p>
+          <p class="depo-text">
+            "Vision Pro entregue com muito cuidado. Suporte excelente antes e
+            depois da compra. Recomendo a NexisStore para todos!"
+          </p>
           <div class="depo-author">
             <div class="depo-avatar">CL</div>
             <div class="depo-info">
@@ -265,10 +349,20 @@
     <section class="section-contato" id="contato">
       <div class="contato-inner" data-aos>
         <span class="section-label">Fique por dentro</span>
-        <h2 class="section-title">Ofertas e lançamentos<br><span>exclusivos para você</span></h2>
-        <p class="contato-sub">Cadastre seu e-mail e seja o primeiro a saber sobre novidades e promoções da NexisStore.</p>
+        <h2 class="section-title">
+          Ofertas e lançamentos<br /><span>exclusivos para você</span>
+        </h2>
+        <p class="contato-sub">
+          Cadastre seu e-mail e seja o primeiro a saber sobre novidades e
+          promoções da NexisStore.
+        </p>
         <form class="newsletter-form" id="newsletterForm">
-          <input type="email" id="emailInput" placeholder="Digite seu melhor e-mail" required />
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Digite seu melhor e-mail"
+            required
+          />
           <button type="submit" class="btn">Inscrever-se</button>
         </form>
         <p class="form-msg" id="formMsg"></p>
@@ -280,12 +374,20 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo">NexisStore</div>
-          <p>A sua loja oficial de produtos Apple no Brasil. Tecnologia premium com atendimento humanizado.</p>
+          <p>
+            A sua loja oficial de produtos Apple no Brasil. Tecnologia premium
+            com atendimento humanizado.
+          </p>
           <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" aria-label="YouTube">YT</a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
 
@@ -324,7 +426,7 @@
 
       <div class="footer-bottom">
         <p>© 2026 NexisStore. Todos os direitos reservados.</p>
-        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>

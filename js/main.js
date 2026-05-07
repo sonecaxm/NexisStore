@@ -116,3 +116,25 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+
+/* ICON MENU */
+  function togglesidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+
+  function closesidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.remove( 'active');
+    overlay.classList.remove( 'active');
+  }
+
+document.querySelectorAll('.sidebar a').forEach((link) => {
+  link.addEventListener('click', closesidebar);
+});
